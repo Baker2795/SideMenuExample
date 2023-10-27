@@ -40,16 +40,13 @@ struct ContentView: View {
                         VStack {
                             Text("Second Screen")
                         }
-                        .cornerRadius(navigationController.isShowingSidebar ? 20 : 10)
-                        .scaleEffect(navigationController.isShowingSidebar ? 0.8 : 1)
-                        .offset(x: navigationController.isShowingSidebar ? 300 : 0, y: navigationController.isShowingSidebar ? 44 : 0)
-                        
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.white)
                     }
                 }
                 .cornerRadius(navigationController.isShowingSidebar ? 20 : 10)
                 .scaleEffect(navigationController.isShowingSidebar ? 0.8 : 1)
                 .offset(x: navigationController.isShowingSidebar ? 300 : 0, y: navigationController.isShowingSidebar ? 44 : 0)
-                
                 
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
